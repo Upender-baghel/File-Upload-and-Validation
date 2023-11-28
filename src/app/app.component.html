@@ -1,0 +1,35 @@
+
+<div class="container bg-light">
+  <h1 class="text-center "><b><i class=""> Upload Files  </i></b></h1>
+
+  <header class="header d-flex bg-info nav-bar"> 
+    <label for="" class="label text-primary"  > Upload Image
+    <input type="file" accept="image/*" (change)="select($event)"  >
+  </label>
+
+  <label for="" class="label text-primary "  > Upload Video
+    <input type="file" accept="video/*" (change)="video($event)"  >
+  </label>
+
+
+  </header>
+  <div class="col d-flex">
+
+    <div class="image">
+      <img  [src]="imageUrl" *ngIf="pic" width="380px" alt="Upload Image">
+      <p class="text-danger text-center"> <b>{{err2}} </b> </p>
+
+      
+    </div>
+
+    <div class="video">
+
+      <video controls style="align-items: center; display: flex;" [src]="video" *ngIf="vid" width="380px" ></video>
+        <p class="text-danger text-center"> <b>{{err}} </b> </p>
+    </div>
+    
+  </div>
+</div>
+
+
+
